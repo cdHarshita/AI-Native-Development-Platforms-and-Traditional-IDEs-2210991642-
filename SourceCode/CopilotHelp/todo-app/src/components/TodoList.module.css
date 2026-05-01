@@ -1,0 +1,32 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ─── Empty state ─────────────────────────── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+  opacity: 0.4;
+}
+
+.empty p {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-muted);
+  max-width: 22ch;
+  line-height: 1.6;
+}

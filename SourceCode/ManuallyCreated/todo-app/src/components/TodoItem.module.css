@@ -1,0 +1,92 @@
+.item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.875rem 1rem;
+  background: var(--glass-bg);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  transition: var(--ease);
+  cursor: pointer;
+}
+
+.item:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border);
+  transform: translateX(3px);
+}
+
+/* Checkbox circle */
+.check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--ease);
+}
+
+.check.done {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.checkIcon {
+  color: #fff;
+  width: 12px;
+  height: 12px;
+  opacity: 0;
+  transform: scale(0.4);
+  transition: var(--ease);
+}
+
+.check.done .checkIcon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Text */
+.text {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: var(--ease);
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.text.done {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+/* Delete button — fades in on hover */
+.del {
+  opacity: 0;
+  color: var(--danger);
+  padding: 0.35rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: var(--ease);
+  flex-shrink: 0;
+}
+
+.del:hover {
+  background: rgba(239, 68, 68, 0.12);
+  color: var(--danger-hover);
+}
+
+.item:hover .del {
+  opacity: 1;
+}
+
+/* Always visible on touch devices */
+@media (hover: none) {
+  .del {
+    opacity: 1;
+  }
+}

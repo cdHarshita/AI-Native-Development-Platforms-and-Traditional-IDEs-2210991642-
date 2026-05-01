@@ -1,0 +1,16 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  border: 1px dashed var(--glass-border);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.1);
+}
